@@ -3,8 +3,8 @@
     display: flex;
     align-items: center;
 }
-$text: rgb(80, 78, 78);
-$white: rgb(243, 243, 243);
+$text: #24272E;
+$white: #f3f3f3;
 
 /*header*/
 
@@ -15,7 +15,6 @@ header{
         width: 100%;
         height: 1px;
         background-color: rgba(170, 169, 169,0.7);
-
     }
 }
 
@@ -27,9 +26,6 @@ header .contact-info {
         padding: 0 1rem;
         a, span {
             color: $white;
-            letter-spacing: 1px;
-            text-decoration: none;
-            font-weight: 200;
         }
         .phone-icon, .wechat-icon {
             width: 15px;
@@ -58,7 +54,7 @@ header .nav {
         animation-delay: 500ms;
         h1 {
             font-weight: 900;
-            font-size: 2em;
+            font-size: 2rem;
         }
         p {
             font-weight: 500;
@@ -77,15 +73,11 @@ header .nav {
             z-index: 90;
             padding: 0.5rem;
             a {
-            color: white;
-            text-decoration: none;
+            color: $white;
             text-align: center;
             position: relative;
             display: block;
-            letter-spacing: 1px;
-            font-size: 1rem;
             z-index: 90;
-            font-weight: 200;
             }
             a:hover {
                 color:black;
@@ -114,7 +106,7 @@ header .nav .burger {
         position: absolute;
         width: 2rem;
         height: 2px;
-        background-color: white;
+        background-color:$white;
     }
     .line1 {
         top: 16%;
@@ -133,11 +125,9 @@ header .nav .burger {
 #home {
     width: 100%;
     height: 76vh;
-    color: $white;
-    background: url('./photo/b1.jpg');
-    background-repeat:no-repeat;
+    background: url('./photo/b1.jpg') no-repeat;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center center;
 
     .slogen {
@@ -149,15 +139,11 @@ header .nav .burger {
         height: 30vh;
         h1 {
             letter-spacing: 15px;
-            font-size: 40px;
+            font-size: 5rem;
             margin: 20px auto;
             color: $white;
             text-align: center;
-        }
-        p {
-            color:$white;
-            letter-spacing: 3px;
-            text-align: center;
+            font-family: 'Zhi Mang Xing', cursive;
         }
     }
     
@@ -166,6 +152,9 @@ header .nav .burger {
 
 
 @media screen and (max-width: 600px) {
+    #home .slogen  h1 {
+        display: none;
+    }
     header .contact-info {
         padding: 1rem;
     }
@@ -180,7 +169,7 @@ header .nav .burger {
       }
     header .nav .nav-links {
         flex-direction: column;
-        background-color:rgba(74, 57, 102, 0.9);
+        background-color:rgba(36,39,46, 0.9);
         width: 100%;
         height: 100vh;
         z-index: 11;

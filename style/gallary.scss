@@ -1,4 +1,5 @@
-
+$text: #24272E;
+$white: #f3f3f3;
 @mixin flexCenter {
     display: flex;
     align-items: center;
@@ -21,9 +22,6 @@
     .gallary-info {
         margin: auto 1rem;
         h1 {
-        text-align: right;
-        }
-        p {
         text-align: right;
         }
     }
@@ -58,9 +56,8 @@
             .text {
                 text-align: center;
                 margin: auto;
-                background-color: white;
+                background-color:$white;
                 height: 20%;
-                box-sizing: border-box;
                 padding: 1rem 0;
             }
             .left {
@@ -102,9 +99,6 @@
         .gallary-info h1  {
             text-align: center;
             }
-        .gallary-info p {
-                text-align: center;
-                }    
     }
   }
   

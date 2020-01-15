@@ -26,9 +26,10 @@ $text:#24272E;
         line-height: 2rem;
     }
     .text-info a{
-        text-decoration: none;
-        color: $text;
         line-height: 2rem;
+        span {
+            color: $text;
+        }
     }
 
     .wechat-qr {
@@ -43,23 +44,12 @@ $text:#24272E;
 
 
 
-@media screen and (max-width: 667px) {
-    #contact .form {
-        width: 18rem;
-        }
-}
-
-
-
 @media screen and (max-width: 768px) {
     #contact {
         flex-direction: column;
         .text-info {
             width: 90vw;
             margin: 1rem auto;
-            h1 {
-                text-align: center;
-            }
         }
         .wechat-qr {
             margin: 1rem auto;
@@ -70,5 +60,4 @@ $text:#24272E;
     .wechat-qr {
         margin: auto 1rem;
     }
-
 }

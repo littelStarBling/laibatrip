@@ -29,9 +29,11 @@
 }
 
 #contact .text-info a {
-  text-decoration: none;
-  color: #24272E;
   line-height: 2rem;
+}
+
+#contact .text-info a span {
+  color: #24272E;
 }
 
 #contact .wechat-qr {
@@ -45,12 +47,6 @@
      object-fit: cover;
 }
 
-@media screen and (max-width: 667px) {
-  #contact .form {
-    width: 18rem;
-  }
-}
-
 @media screen and (max-width: 768px) {
   #contact {
     -webkit-box-orient: vertical;
@@ -61,9 +57,6 @@
   #contact .text-info {
     width: 90vw;
     margin: 1rem auto;
-  }
-  #contact .text-info h1 {
-    text-align: center;
   }
   #contact .wechat-qr {
     margin: 1rem auto;

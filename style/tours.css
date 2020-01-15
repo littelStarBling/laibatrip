@@ -14,7 +14,6 @@
 #tours .tours-heading h1 {
   width: 100%;
   padding-bottom: 1rem;
-  color: #24272E;
 }
 
 #tours .long-tour, #tours .one-day-tour {
@@ -29,7 +28,6 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  letter-spacing: 1px;
 }
 
 .one-day-tour {
@@ -38,22 +36,6 @@
 
 .long-tour-info, .one-day-tour-info {
   width: 30%;
-}
-
-.one-day-tour-info ul {
-  list-style-image: url("./photo/checked.png");
-  width: 100%;
-}
-
-.one-day-tour-info ul li {
-  padding: 3px 0;
-  letter-spacing: 1px;
-  margin-left: 1.5rem;
-}
-
-.one-day-tour-info h5 {
-  padding: 5px 0 2px 0;
-  letter-spacing: 2px;
 }
 
 .tour-examples {

@@ -1,7 +1,7 @@
 footer {
   width: 100%;
   background-color: #ccc3c3;
-  padding: 2rem 0 0;
+  padding-top: 2rem;
 }
 
 footer .advs {
@@ -48,12 +48,7 @@ footer .advs .advs-img .one .adv, footer .advs .advs-img .two .adv {
   margin: 1rem;
 }
 
-footer .advs .advs-img .one .adv a, footer .advs .advs-img .two .adv a {
-  text-decoration: none;
-  color: #504e4e;
-}
-
-footer .advs .advs-img .one .adv a img, footer .advs .advs-img .two .adv a img {
+footer .advs .advs-img .one .adv img, footer .advs .advs-img .two .adv img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -83,7 +78,7 @@ footer .withline .shortline {
   width: 2rem;
   height: 2px;
   border-radius: 1px;
-  background-color: #504e4e;
+  background-color: #24272E;
   margin: auto 1rem;
 }
 
@@ -91,14 +86,10 @@ footer .withline .footlogo {
   margin: 0 3px;
 }
 
-footer .withline .footlogo a {
-  text-decoration: none;
-  color: #fafafa;
-}
-
 footer .withline .footlogo a h1 {
   font-weight: 900;
   font-size: 2em;
+  color: #24272E;
 }
 
 footer .info {

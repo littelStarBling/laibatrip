@@ -1,19 +1,18 @@
 
 /*variable*/
 $text: #24272E;
-
+$white: #f3f3f3;
 /*set up*/  
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: $text;
 }
-
 
 html {
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 15px;
+    color: $text
 }
 .wrapper {
     overflow-x: hidden;
@@ -21,18 +20,18 @@ html {
 
 body {
     width: 100%;
-    background-color: rgb(250, 249, 249);
 }
-p {
+p, span, a {
     letter-spacing: 1px;
-    font-weight: 200;
+    font-weight: 300;
 }
-h1, h3, h4 {
+h1, h2, h3, h4, h5{
     letter-spacing: 2px;
     font-weight: 100;
-    color: $text;
 }
-
+a {
+    text-decoration: none;
+}
 @mixin flexCenter {
     display: flex;
     align-items: center;
