@@ -1,0 +1,128 @@
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+}
+/*gallary*/
+#i1:checked ~ #a,
+#i2:checked ~ #b,
+#i3:checked ~ #c,
+#i4:checked ~ #d,
+#i5:checked ~ #e,
+#i6:checked ~ #f{
+    z-index: 3;
+}
+
+#gallary {
+    width: 90%;
+    height: 80vh;
+    @include flexCenter();
+    justify-content: space-evenly;
+    .gallary-info {
+        margin: auto 1rem;
+        h1 {
+        text-align: right;
+        }
+        p {
+        text-align: right;
+        }
+    }
+    
+.slidescontainer {
+    margin: auto 0;
+    width: 30rem;
+    height: 65vh;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    .slides {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        input {
+            display: none;
+        }
+        .image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            
+            .img {
+                width: 100%;
+                height: 80%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .text {
+                text-align: center;
+                margin: auto;
+                background-color: white;
+                height: 20%;
+                box-sizing: border-box;
+                padding: 1rem 0;
+            }
+            .left {
+                width: 3rem;
+                height: 3rem;
+                position: absolute;
+                top: 45%;
+                left: -3.5rem;
+                cursor: pointer;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }  
+            }
+            .right {
+                width: 3rem;
+                height: 3rem;
+                position: absolute;
+                top: 45%;
+                right: -3.5rem;
+                cursor: pointer;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }  
+            }
+            
+             
+            }
+        }
+    }
+  }
+  @media screen and (max-width: 850px) {
+    #gallary {
+        width: 100%;
+        flex-direction: column;
+        .gallary-info h1  {
+            text-align: center;
+            }
+        .gallary-info p {
+                text-align: center;
+                }    
+    }
+  }
+  
+  @media screen and (max-width: 667px) {
+    #gallary {
+        .slidescontainer {
+            width: 80%;
+            height: 55vh;
+            .slides .image .left, .slides .image .right {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            .slides .image .right {
+                right: -2rem;
+            }
+            .slides .image .left {
+                left: -2rem;
+            }
+        }
+    }
+  }

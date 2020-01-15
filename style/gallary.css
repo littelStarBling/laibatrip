@@ -1,0 +1,148 @@
+/*gallary*/
+#i1:checked ~ #a,
+#i2:checked ~ #b,
+#i3:checked ~ #c,
+#i4:checked ~ #d,
+#i5:checked ~ #e,
+#i6:checked ~ #f {
+  z-index: 3;
+}
+
+#gallary {
+  width: 90%;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#gallary .gallary-info {
+  margin: auto 1rem;
+}
+
+#gallary .gallary-info h1 {
+  text-align: right;
+}
+
+#gallary .gallary-info p {
+  text-align: right;
+}
+
+#gallary .slidescontainer {
+  margin: auto 0;
+  width: 30rem;
+  height: 65vh;
+  position: relative;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#gallary .slidescontainer .slides {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#gallary .slidescontainer .slides input {
+  display: none;
+}
+
+#gallary .slidescontainer .slides .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#gallary .slidescontainer .slides .image .img {
+  width: 100%;
+  height: 80%;
+}
+
+#gallary .slidescontainer .slides .image .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#gallary .slidescontainer .slides .image .text {
+  text-align: center;
+  margin: auto;
+  background-color: white;
+  height: 20%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem 0;
+}
+
+#gallary .slidescontainer .slides .image .left {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 45%;
+  left: -3.5rem;
+  cursor: pointer;
+}
+
+#gallary .slidescontainer .slides .image .left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#gallary .slidescontainer .slides .image .right {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 45%;
+  right: -3.5rem;
+  cursor: pointer;
+}
+
+#gallary .slidescontainer .slides .image .right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 850px) {
+  #gallary {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #gallary .gallary-info h1 {
+    text-align: center;
+  }
+  #gallary .gallary-info p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  #gallary .slidescontainer {
+    width: 80%;
+    height: 55vh;
+  }
+  #gallary .slidescontainer .slides .image .left, #gallary .slidescontainer .slides .image .right {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  #gallary .slidescontainer .slides .image .right {
+    right: -2rem;
+  }
+  #gallary .slidescontainer .slides .image .left {
+    left: -2rem;
+  }
+}
+/*# sourceMappingURL=gallary.css.map */

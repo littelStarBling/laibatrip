@@ -1,0 +1,74 @@
+$text:#24272E;
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+}
+
+/* contact */
+
+
+#contact {
+    width: 100%;
+    margin: 5rem auto;
+    @include flexCenter();
+    justify-content: center;
+    .text-info {
+        text-align: center;
+        margin: 0 5rem;
+    }
+    .text-info h1{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .text-info p {
+        text-align: center;
+        line-height: 2rem;
+    }
+    .text-info a{
+        text-decoration: none;
+        color: $text;
+        line-height: 2rem;
+    }
+
+    .wechat-qr {
+        width: 12.5rem;
+        margin: auto 5rem;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 667px) {
+    #contact .form {
+        width: 18rem;
+        }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    #contact {
+        flex-direction: column;
+        .text-info {
+            width: 90vw;
+            margin: 1rem auto;
+            h1 {
+                text-align: center;
+            }
+        }
+        .wechat-qr {
+            margin: 1rem auto;
+        }
+    }
+}
+@media screen and (max-width: 1024){
+    .wechat-qr {
+        margin: auto 1rem;
+    }
+
+}

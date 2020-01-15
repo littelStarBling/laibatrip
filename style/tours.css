@@ -1,0 +1,353 @@
+/* tours */
+#tours {
+  width: 90%;
+  margin: 3rem auto 0;
+}
+
+#tours .tours-heading {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+#tours .tours-heading h1 {
+  width: 100%;
+  padding-bottom: 1rem;
+  color: #24272E;
+}
+
+#tours .long-tour, #tours .one-day-tour {
+  margin: 2rem auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  letter-spacing: 1px;
+}
+
+.one-day-tour {
+  margin-top: 5rem;
+}
+
+.long-tour-info, .one-day-tour-info {
+  width: 30%;
+}
+
+.one-day-tour-info ul {
+  list-style-image: url("./photo/checked.png");
+  width: 100%;
+}
+
+.one-day-tour-info ul li {
+  padding: 3px 0;
+  letter-spacing: 1px;
+  margin-left: 1.5rem;
+}
+
+.one-day-tour-info h5 {
+  padding: 5px 0 2px 0;
+  letter-spacing: 2px;
+}
+
+.tour-examples {
+  width: 55%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[6];
+  -ms-grid-columns: (1fr)[7];
+      grid-template: repeat(6, 1fr)/repeat(7, 1fr);
+  grid-gap: 0.3rem;
+  height: 55vh;
+}
+
+.tour-examples #overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.tour-examples #overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.tour-examples .tour-img:hover .open-button {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.tour-examples .tour-img:hover::before {
+  opacity: 0.5;
+}
+
+.tour-examples .tour-img::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  opacity: 0;
+}
+
+.tour-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.tour-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.tour-img .open-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  font-size: 1.25rem;
+  z-index: 7;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+.modal.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.modal {
+  width: 40%;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  padding: 1rem;
+  background: white;
+  border-radius: 5%;
+  z-index: 10;
+}
+
+.modal .modal-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal .modal-heading .modal-title {
+  color: #24272E;
+}
+
+.modal .modal-heading .close-button {
+  border: none;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal .modal-body {
+  padding: 1rem;
+}
+
+.long-tour-imgs {
+      grid-template-areas: "a a a d d d d" "a a a d d d d" "b b b d d d d" "b b b e e e e" "c c c e e e e" "c c c e e e e";
+}
+
+.long-tour-imgs .one {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-area: a;
+}
+
+.long-tour-imgs .two {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-area: b;
+}
+
+.long-tour-imgs .three {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-area: c;
+}
+
+.long-tour-imgs .four {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: d;
+}
+
+.long-tour-imgs .five {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: e;
+}
+
+.one-day-tour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.one-day-tour .one-day-tour-info {
+  width: 30%;
+}
+
+.one-day-tour .one-day-tour-info {
+  color: #24272E;
+}
+
+.one-day-tour-imgs {
+  width: 55%;
+      grid-template-areas: "d d d d a a a" "d d d d a a a" "d d d d b b b" "e e e e b b b " "e e e e c c c" "e e e e c c c";
+}
+
+.one-day-tour-imgs .one {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-area: a;
+}
+
+.one-day-tour-imgs .two {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-area: b;
+}
+
+.one-day-tour-imgs .three {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-area: c;
+}
+
+.one-day-tour-imgs .four {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: d;
+}
+
+.one-day-tour-imgs .five {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: e;
+}
+
+.long-tour-info-detail {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.long-tour-info {
+  text-align: right;
+}
+
+@media screen and (max-width: 1024px) {
+  .long-tour {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .long-tour .long-tour-info {
+    width: 100%;
+    text-align: center;
+    margin: 1rem auto;
+  }
+  .long-tour .long-tour-imgs {
+    width: 100%;
+  }
+  .modal {
+    width: 90%;
+  }
+  .one-day-tour {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .one-day-tour .one-day-tour-imgs {
+    margin: 4rem auto;
+    width: 100%;
+  }
+  .one-day-tour .one-day-tour-info {
+    width: 100%;
+    margin: 1rem auto;
+  }
+  .one-day-tour .one-day-tour-info h1 {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=tours.css.map */

@@ -1,0 +1,133 @@
+footer {
+  width: 100%;
+  background-color: #ccc3c3;
+  padding: 2rem 0 0;
+}
+
+footer .advs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .advs .title {
+  margin: 1rem;
+  text-align: right;
+}
+
+footer .advs .advs-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .advs .advs-img .one, footer .advs .advs-img .two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .advs .advs-img .one .adv, footer .advs .advs-img .two .adv {
+  width: 3rem;
+  margin: 1rem;
+}
+
+footer .advs .advs-img .one .adv a, footer .advs .advs-img .two .adv a {
+  text-decoration: none;
+  color: #504e4e;
+}
+
+footer .advs .advs-img .one .adv a img, footer .advs .advs-img .two .adv a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer .line {
+  width: 100%;
+  height: 1px;
+  background-color: #b3b1b1;
+}
+
+footer .withline {
+  position: relative;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .withline .shortline {
+  width: 2rem;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #504e4e;
+  margin: auto 1rem;
+}
+
+footer .withline .footlogo {
+  margin: 0 3px;
+}
+
+footer .withline .footlogo a {
+  text-decoration: none;
+  color: #fafafa;
+}
+
+footer .withline .footlogo a h1 {
+  font-weight: 900;
+  font-size: 2em;
+}
+
+footer .info {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+footer .slogen {
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  footer .advs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .info {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  footer .advs .advs-img {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

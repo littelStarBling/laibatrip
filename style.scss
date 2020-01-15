@@ -1,0 +1,48 @@
+
+/*variable*/
+$text: #24272E;
+
+/*set up*/  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $text;
+}
+
+
+html {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 15px;
+}
+.wrapper {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(250, 249, 249);
+}
+p {
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+h1, h3, h4 {
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: $text;
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+}
+
+
+
+@import './style/home.scss';
+@import './style/tours.scss';
+@import './style/about.scss';
+@import './style/gallary.scss';
+@import './style/contact.scss';
+@import './style/footer.scss';

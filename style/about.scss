@@ -1,0 +1,164 @@
+/*variable*/
+$text: rgb(80, 78, 78);
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+}
+
+/*about*/
+#about {
+    @include flexCenter();
+    justify-content: center;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    .selfie {
+        width: 25%;
+        margin: 0 0 auto 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+    .container {
+        @include flexCenter();
+        flex-direction: column;
+        width: 66%;
+        padding: 0 2rem;
+
+        .about-me, .our-concept { 
+            text-align: left;
+            color: $text;
+            width: 100%;
+        
+        }
+    }
+}
+
+
+
+/* review */
+
+
+#r1:checked ~ #one,
+#r2:checked ~ #two,
+#r3:checked ~ #three{
+    z-index: 3;
+}
+.reviews {
+    margin: 9rem auto 2rem auto;
+    width: 100%;
+    .title {
+        margin: 1rem auto;
+        text-align: center;
+        color: $text;
+    }
+}
+.reviews .slidershow {
+    margin: 1rem auto;
+    width: 60%;
+    height: 30vh;
+    position: relative;
+
+    .slides {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        input {
+            display: none;
+        }
+        .review {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color:rgb(250, 249, 249);
+            p {
+                text-align: left;
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+            .sign {
+                width: 100%;
+                text-align: end;
+            }
+            .pre {
+                width: 3rem;
+                height: 3rem;
+                position: absolute;
+                top: 10%;
+                left: -5rem;
+                cursor: pointer;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .nxt {
+                width: 3rem;
+                height: 3rem;
+                position: absolute;
+                top: 10%;
+                right: -5rem;
+                cursor: pointer;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #about {
+        margin: 1rem auto;
+        padding: 0;
+    }
+    .reviews .slidershow .slides .review .pre, .reviews .slidershow .slides .review .nxt {
+        top: 25%;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    #about {
+        flex-direction: column;
+        .selfie {
+        width: 88%;
+        height: 40vh;
+        margin: 2rem auto;
+        }
+        .container {
+        width: 90%;
+        padding: 0;
+        margin: 0 auto;
+        }
+    }
+    .reviews .slidershow {
+        width: 70%;
+        height: 35vh;
+        .slides .review .pre, .slides .review .nxt {
+            top: 30%;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+        .slides .review .pre{
+            left: -2rem;
+        }
+        .slides .review .nxt {
+            right: -2rem;
+        }
+    }
+
+}
+@media screen and (max-width: 500px){
+
+    .reviews .slidershow {
+        height: 40vh;
+    }
+} 

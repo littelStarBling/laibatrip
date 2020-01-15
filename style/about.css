@@ -1,0 +1,183 @@
+/*variable*/
+/*about*/
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+#about .selfie {
+  width: 25%;
+  margin: 0 0 auto 0;
+}
+
+#about .selfie img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+#about .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 66%;
+  padding: 0 2rem;
+}
+
+#about .container .about-me, #about .container .our-concept {
+  text-align: left;
+  color: #504e4e;
+  width: 100%;
+}
+
+/* review */
+#r1:checked ~ #one,
+#r2:checked ~ #two,
+#r3:checked ~ #three {
+  z-index: 3;
+}
+
+.reviews {
+  margin: 9rem auto 2rem auto;
+  width: 100%;
+}
+
+.reviews .title {
+  margin: 1rem auto;
+  text-align: center;
+  color: #504e4e;
+}
+
+.reviews .slidershow {
+  margin: 1rem auto;
+  width: 60%;
+  height: 30vh;
+  position: relative;
+}
+
+.reviews .slidershow .slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews .slidershow .slides input {
+  display: none;
+}
+
+.reviews .slidershow .slides .review {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #faf9f9;
+}
+
+.reviews .slidershow .slides .review p {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.reviews .slidershow .slides .review .sign {
+  width: 100%;
+  text-align: end;
+}
+
+.reviews .slidershow .slides .review .pre {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 10%;
+  left: -5rem;
+  cursor: pointer;
+}
+
+.reviews .slidershow .slides .review .pre img {
+  width: 100%;
+  height: 100%;
+}
+
+.reviews .slidershow .slides .review .nxt {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 10%;
+  right: -5rem;
+  cursor: pointer;
+}
+
+.reviews .slidershow .slides .review .nxt img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 850px) {
+  #about {
+    margin: 1rem auto;
+    padding: 0;
+  }
+  .reviews .slidershow .slides .review .pre, .reviews .slidershow .slides .review .nxt {
+    top: 25%;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  #about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about .selfie {
+    width: 88%;
+    height: 40vh;
+    margin: 2rem auto;
+  }
+  #about .container {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .reviews .slidershow {
+    width: 70%;
+    height: 35vh;
+  }
+  .reviews .slidershow .slides .review .pre, .reviews .slidershow .slides .review .nxt {
+    top: 30%;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .reviews .slidershow .slides .review .pre {
+    left: -2rem;
+  }
+  .reviews .slidershow .slides .review .nxt {
+    right: -2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .reviews .slidershow {
+    height: 40vh;
+  }
+}
+/*# sourceMappingURL=about.css.map */

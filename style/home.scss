@@ -1,0 +1,323 @@
+/*variable*/
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+}
+$text: rgb(80, 78, 78);
+$white: rgb(243, 243, 243);
+
+/*header*/
+
+header{
+    position: absolute;
+    width: 100%;
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(170, 169, 169,0.7);
+
+    }
+}
+
+header .contact-info {
+    @include flexCenter();
+    padding: 1rem 1rem 0.7rem 2.5rem;
+    .phone, .wechat {
+        @include flexCenter();
+        padding: 0 1rem;
+        a, span {
+            color: $white;
+            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight: 200;
+        }
+        .phone-icon, .wechat-icon {
+            width: 15px;
+            height: 15px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .wechat-icon {
+            margin-right: 0.5rem;
+        }
+    }
+}    
+
+
+header .nav {
+    @include flexCenter();
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 3rem;
+    .logo {
+        transform: translateX(-20rem);
+        animation: slideIn 700ms forwards;
+        animation-delay: 500ms;
+        h1 {
+            font-weight: 900;
+            font-size: 2em;
+        }
+        p {
+            font-weight: 500;
+        }
+    }
+    .nav-links {
+        display: flex;
+        @include flexCenter();
+        justify-content: space-around;
+        li {
+            transform: translateX(30rem);
+            animation: slideIn 700ms forwards;
+            animation-delay: 500ms;
+            list-style: none;
+            width: 6rem;
+            z-index: 90;
+            padding: 0.5rem;
+            a {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+            display: block;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            z-index: 90;
+            font-weight: 200;
+            }
+            a:hover {
+                color:black;
+            }
+        }
+    }
+}    
+header .nav .nav-links li:first-child{
+    padding-left: 0;
+}
+
+
+header .nav .burger {
+    position: fixed;
+    padding: 0.5rem 1rem;
+    width: 4rem;
+    height: 3rem;
+    top: 4rem;
+    right: 2rem;
+    background-color: rgb(58, 53, 92);
+    z-index: 7;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+    div {
+        position: absolute;
+        width: 2rem;
+        height: 2px;
+        background-color: white;
+    }
+    .line1 {
+        top: 16%;
+    }
+    .line2 , .line4{
+        top: 46%;
+    }
+    .line3 {
+        top: 76%;
+    }
+}
+
+
+/* home */
+
+#home {
+    width: 100%;
+    height: 76vh;
+    color: $white;
+    background: url('./photo/b1.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+
+    .slogen {
+        width: 100%;
+        position: absolute;
+        top: -12%;
+        animation: bounce 700ms forwards;
+        animation-delay: 500ms;
+        height: 30vh;
+        h1 {
+            letter-spacing: 15px;
+            font-size: 40px;
+            margin: 20px auto;
+            color: $white;
+            text-align: center;
+        }
+        p {
+            color:$white;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+    }
+    
+}
+
+
+
+@media screen and (max-width: 600px) {
+    header .contact-info {
+        padding: 1rem;
+    }
+    header .nav .logo {
+        position: absolute;
+        top: 4.5rem;
+        left: 2rem;
+    }
+    header .nav .burger{
+        display: block;
+        z-index: 12;
+      }
+    header .nav .nav-links {
+        flex-direction: column;
+        background-color:rgba(74, 57, 102, 0.9);
+        width: 100%;
+        height: 100vh;
+        z-index: 11;
+        position: fixed;
+        padding: 20% 0;
+        top:0;
+        left: 0;
+        transform: translateX(-100%);
+        overflow-x: hidden;
+        li {
+            width: 12rem;
+            a {
+                font-size: 1.5rem;
+            }
+        }
+        
+    }
+    header .line {
+        position: absolute;
+        top: 3rem;
+
+    }
+
+}
+
+
+/* burger toggle class*/
+.toggle .line1{
+    display: none;
+    }
+
+    .toggle .line2 {
+        transform: rotate(45deg);
+    }
+    .toggle .line4 {
+        transform: rotate(-45deg);
+    }
+    .toggle .line3 {
+        display: none;
+    }
+
+    ul.nav-links.open-menu {
+        transform: translateX(0%);
+    }
+/* animation */
+
+@keyframes slideIn {
+    from {}
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(-100%);
+        }
+    
+        12% {
+            transform: translateY(60.89%);
+        }
+    
+        24% {
+            transform: translateY(93.56%);
+        }
+    
+        36% {
+            transform: translateY(148.01%);
+        }
+    
+        54% {
+            transform: translateY(125.02%);
+        }
+    
+        74% {
+            transform: translateY(148.37%);
+        }
+    
+        82% {
+            transform: translateY(143.75%);
+        }
+    
+        92% {
+            transform: translateY(149.34%);
+        }
+    
+        96% {
+            transform: translateY(148.46%);
+        }
+    
+        100% {
+            transform: translateY(150%);
+        }
+    
+    }
+
+    @keyframes bounceS {
+        0% {
+            transform: translateY(-20%);
+        }
+    
+        12% {
+            transform: translateY(10.89%);
+        }
+    
+        24% {
+            transform: translateY(43.56%);
+        }
+    
+        36% {
+            transform: translateY(98.01%);
+        }
+    
+        54% {
+            transform: translateY(75.02%);
+        }
+    
+        74% {
+            transform: translateY(98.37%);
+        }
+    
+        82% {
+            transform: translateY(93.75%);
+        }
+    
+        92% {
+            transform: translateY(99.34%);
+        }
+    
+        96% {
+            transform: translateY(98.46%);
+        }
+    
+        100% {
+            transform: translateY(100%);
+        }
+    
+    }

@@ -1,0 +1,78 @@
+/* contact */
+#contact {
+  width: 100%;
+  margin: 5rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact .text-info {
+  text-align: center;
+  margin: 0 5rem;
+}
+
+#contact .text-info h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#contact .text-info p {
+  text-align: center;
+  line-height: 2rem;
+}
+
+#contact .text-info a {
+  text-decoration: none;
+  color: #24272E;
+  line-height: 2rem;
+}
+
+#contact .wechat-qr {
+  width: 12.5rem;
+  margin: auto 5rem;
+}
+
+#contact .wechat-qr img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 667px) {
+  #contact .form {
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact .text-info {
+    width: 90vw;
+    margin: 1rem auto;
+  }
+  #contact .text-info h1 {
+    text-align: center;
+  }
+  #contact .wechat-qr {
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 1024) {
+  .wechat-qr {
+    margin: auto 1rem;
+  }
+}
+/*# sourceMappingURL=contact.css.map */
